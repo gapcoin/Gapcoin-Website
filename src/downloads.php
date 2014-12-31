@@ -72,21 +72,51 @@
           <br>
         </p> 
         <p>
-          <b>RPC-Miner (Linux binaries):</b> 
-          <a href="https://github.com/gapcoin/GapMiner/releases/download/linux-binary/gapminer-linux.zip">
+          <b>Modded-CPU-Miner (Linux binaries):</b> 
+          <a href="https://github.com/gapcoin/GapMiner/releases/download/dcct-mod/linux.zip">
             &nbsp;&nbsp;&nbsp;&nbsp;GapMiner (github)
           </a>
           <br>
-          md5: 1e32c9c0672b5af024b26600c0784b8c
+          md5: 15999a95ed79174c83c92827884ee8b6
         </p>
         <p>
-          <b>RPC-Miner (Windows binaries):</b> 
-          <a href="https://github.com/gapcoin/GapMiner/releases/download/windows-binaries/gapminer-windows.zip">
+          <b>Modded-CPU-Miner (Windows binaries):</b> 
+          <a href="https://github.com/gapcoin/GapMiner/releases/download/dcct-mod/windows.zip">
             &nbsp;&nbsp;&nbsp;&nbsp;GapMiner (github)
           </a>
           <br>
-          md5: ab58454bb056f80c0d1dc25ae9ea34e1
+          md5: d8b7f82ef2e325f7feff1b2630e21849
         </p>
+        <p>
+          <b>Improved-GPU-Miner (Linux binaries):</b> 
+          <a href="https://github.com/gapcoin/GapMiner/releases/download/gpu-miner-rev3/linux.zip">
+            &nbsp;&nbsp;&nbsp;&nbsp;GapMiner (github)
+          </a>
+          <br>
+          md5: 85bb6f69b22de5e51388155e7b532195
+        </p>
+        <p>
+          <b>Improved-GPU-Miner (Windows binaries):</b> 
+          <a href="zi://github.com/gapcoin/GapMiner/releases/download/gpu-miner-rev3/windows.zip">
+            &nbsp;&nbsp;&nbsp;&nbsp;GapMiner (github)
+          </a>
+          <br>
+          md5: 6e0fa4a4331c3758bec1fc74334aa753
+        </p>
+        <p>
+          <b>Gapcoin's prime gaps:</b>
+          <br>
+          The following file contains all prime gaps found by the gapcoin network.
+          <br>
+          <a href="http://gapcoin.de/primegap-dump.zip">
+            &nbsp;&nbsp;&nbsp;&nbsp;zip-file
+          </a>
+          <br>
+          <a href="http://gapcoin.de/primegap-dump.txt">
+            &nbsp;&nbsp;&nbsp;&nbsp;plain-text-file
+          </a>
+          <br>
+       </p>
       </div>
       <?php include("./info.php"); ?>
     </div>

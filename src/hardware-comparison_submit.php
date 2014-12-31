@@ -49,7 +49,7 @@
                        "VALUES (" .
                        "'" . htmlentities($_POST['manufacturer'], ENT_QUOTES) . "', " .
                        "'" . htmlentities($_POST['model'], ENT_QUOTES) . "', " .
-                       "'" . htmlentities($_POST['pps'], ENT_QUOTES) . "', " .
+                       intval(htmlentities($_POST['pps'], ENT_QUOTES)) . ", " .
                        "'" . htmlentities($_POST['watts'], ENT_QUOTES) . "', " .
                        "'" . htmlentities($_POST['clock'], ENT_QUOTES) . "', " .
                        "'" . htmlentities($_POST['cores'], ENT_QUOTES) . "', " .

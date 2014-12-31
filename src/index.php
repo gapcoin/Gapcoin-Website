@@ -75,104 +75,57 @@
               before launch, the password will be revealed at launch.</li>
         </ul>
         <p>&nbsp;</p>
-        <h3>What are the advantages of Gapcoin compared with other prime number based cryptocurrencies?</h3>
-        <p>First of all, Gapcoin follows Riecoin's way and uses enough Miller-Rabin 
-           tests with random bases to avoid composite numbers being accepted as 
-           Prove of Work, like Primecoin mistakenly could.
+        <h3>How is Proof of Work actually designed?</h3>
+        <p>A PoW algorithm has to fit two specifications:</p>
+        <ul>
+          <li>It must be cryptographically secure (a PoW must not be reusable)</li>
+          <li>It must be hard to calculate, but easy to verify</li>
+        </ul>
+        <p>Verifying a prime gap is easy, you only have to check every 
+           number between the start and the end to be composite.
         </p>
-        <p>But the real improvement is due to its easy “pool-mineable” Hashing algorithm.
-           <rb>
-           This means that creating a Gapcoin pool will be as easy as creating a scrypt one!
+        <p>Calculating is harder, much harder!
+           <br>
+           Large prime gaps occur a lot lesser than smaller ones. According to 
+           <a href="http://primerecords.dk/primegaps/gaps20.htm">E.&nbsp;Westzynthius</a>,
+           in e^n prime gaps there will be one gap that is n times greater than the average prime gap.
         </p>
-
-          <h4>Why is that important?</h4>
-          <p>When you look at Riecoin, there are only two pools. Even Primecoin, 
-             the first scientific cryptocurrency, only has three reliable pools.
-             <br>
-             This is due to the difficulty of creating a fair reward system for 
-             the custom hashing algorithms of Prime- and Riecoin.
-          </p>
-          <p>In Primecoin, which is searching for long prime chains, you can 
-             easily modify your miner to search for smaller chains. In fact, 
-             it is mostly about a simple one-line-editing.
-             As an example, just turn a 10 into a 7 in 
-             <a href="https://github.com/thbaumbach/primecoin">xolominer</a> 
-             and you will get scads of 7-chains, but your chance to find a 
-             block has diminished.
-             <br>
-             To avoid this, pools supply better payment for shares with longer chain-lengths.
-          </p>
-          <p>In Riecoin, it is even worse. Riecoin searches for prime tuples of length 6. 
-             Pools do accept tuples with less primes, but a 6-tuple only can occur in 
-             certain places. (Look at 
-             <a href="http://da-data.blogspot.de/2014/03/fast-prime-cluster-search-or-building.html">this</a>
-             post for a detailed explanation.)
-             <br>
-             4-tuples, by comparison, are more frequent. There are places, 
-             where a 4-tuple can occur, but no 6-tuple, which Riecoin truly needs. 
-             So pools have to check every submitted share whether the miner really searches 
-             for 6-tuples or not. 
-             <br>
-             Those facts are what make it so hard to create a Prime- or Riecoin pool.
-          </p>
-          <p>With Gapcoin, there won't be any problems like these. While in Riecoin 
-             and Primecoin you can choose whether to search for bigger shares or smaller 
-             ones, Gapcoin is searching for prime gaps in general. The distribution 
-             of prime gaps is still a mystery for mathematicians, that's why you 
-             can't modify your miner to look for special results. Consequently, 
-             every submitted share can be paid equally. 
-          </p>
-          <p>&nbsp;</p>
-          <h3>How is Proof of Work actually designed?</h3>
-          <p>A PoW algorithm has to fit two specifications:</p>
-          <ul>
-            <li>It must be cryptographically secure (a PoW must not be reusable)</li>
-            <li>It must be hard to calculate, but easy to verify</li>
-          </ul>
-          <p>Verifying a prime gap is easy, you only have to check every 
-             number between the start and the end to be composite.
-          </p>
-          <p>Calculating is harder, much harder!
-             <br>
-             Large prime gaps occur a lot lesser than smaller ones. According to 
-             <a href="http://primerecords.dk/primegaps/gaps20.htm">E.&nbsp;Westzynthius</a>,
-             in e^n prime gaps there will be one gap that is n times greater than the average prime gap.
-          </p>
       
-          <h4>So the difficulty will simply be the length of the prime gap?</h4>
+        <h4>So the difficulty will simply be the length of the prime gap?</h4>
 
-          <p>Not exactly. The average length of a prime gap with the starting
-             prime p, is log(p), which means that the average prime gap size 
-             increases with lager primes.
-             <br>
-             Then, instead of the pure length, we use the merit of the prime gap, 
-             which is the ratio of the gap's size to the average gap size.
-          </p>
-          <p>Let p be the prime starting a prime gap, then m&nbsp;=&nbsp;gapsize/log(p) 
-             will be the merit of this prime gap.
-          </p>
-          <p>Also a pseudo random number is calculated from p to provide finer 
-             difficulty adjustment.
-          </p>
-          <p>Let rand(p) be a pseudo random function with 
-             0&nbsp;&#x3c;&nbsp;rand(p)&nbsp;&#x3c;&nbsp;1
-             <br>
-             Then, for a prime gap starting at prime p with size s, the 
-             difficulty will be s/log(p)&nbsp;+&nbsp;2/log(p)&nbsp;*&nbsp;rand(p), where 2/log(p) 
-             is the average distance between a gap of size s and s&nbsp;+&nbsp;2 
-             (the next greater gap) in the proximity of p.
-          </p>
-          <p>When it actually comes to mining, there are two additional fields 
-             added to the Blockheader, named “shift” and “adder”.
-             <br>
-             We will calculate the prime p as sha256(Blockheader)&nbsp;*&nbsp;2^shift&nbsp;+&nbsp;adder.
-             <br>
-             As an additional criterion the adder has to be smaller 
-             than 2^shift to avoid that the PoW could be reused.
-          </p>
+        <p>Not exactly. The average length of a prime gap with the starting
+           prime p, is log(p), which means that the average prime gap size 
+           increases with lager primes.
+           <br>
+           Then, instead of the pure length, we use the merit of the prime gap, 
+           which is the ratio of the gap's size to the average gap size.
+        </p>
+        <p>Let p be the prime starting a prime gap, then m&nbsp;=&nbsp;gapsize/log(p) 
+           will be the merit of this prime gap.
+        </p>
+        <p>Also a pseudo random number is calculated from p to provide finer 
+           difficulty adjustment.
+        </p>
+        <p>Let rand(p) be a pseudo random function with 
+           0&nbsp;&#x3c;&nbsp;rand(p)&nbsp;&#x3c;&nbsp;1
+           <br>
+           Then, for a prime gap starting at prime p with size s, the 
+           difficulty will be s/log(p)&nbsp;+&nbsp;2/log(p)&nbsp;*&nbsp;rand(p), where 2/log(p) 
+           is the average distance between a gap of size s and s&nbsp;+&nbsp;2 
+           (the next greater gap) in the proximity of p.
+        </p>
+        <p>When it actually comes to mining, there are two additional fields 
+           added to the Blockheader, named “shift” and “adder”.
+           <br>
+           We will calculate the prime p as sha256(Blockheader)&nbsp;*&nbsp;2^shift&nbsp;+&nbsp;adder.
+           <br>
+           As an additional criterion the adder has to be smaller 
+           than 2^shift to avoid that the PoW could be reused.
+        </p>
         <p>&nbsp;</p>
         <h3>Could we break any world records?</h3>
-        <p>Sure, if the difficulty reaches 35.4245, every block will be a 
+        <p>We already <a href="./primegaps.php">broke 544 records</a> of first known occurrence prime gaps.</p>
+        <p>Also, if the difficulty reaches 35.4245, every block will be a 
            new world record: <a href="http://primerecords.dk/primegaps/gaps20.htm">
            Top&nbsp;20&nbsp;Prime&nbsp;Gaps</a>
         </p>

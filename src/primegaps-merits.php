@@ -28,21 +28,10 @@
     </div>
 
     <div id="body_div">
-      <div id="artikel">
-        <h2> Mining </h2>
-        <p>Gapcoin can be mined with CPU and GPU. GPU is about 6x faster than CPU.
-        </p>
-
-        <p>Pool: <a href="http://gap.nonce-pool.com">http://gap.nonce-pool.com</a></p>
-        <p>CPU Cloud Mining Guide: <a href="http://gapcoin.grn.cc">http://gapcoin.grn.cc</a></p>
-        <p>Download section: <a href="./downloads.php">downloads</a></p>
-
-        <p>Mining hardware comparison (outdated):
-           <br/>
-           &nbsp;&nbsp;&nbsp;&nbsp;<a href="http://gapcoin.org/hardware-comparison.php">http://gapcoin.org/hardware-comparison.php</a>
-        </p>
+      <div id="artikel_full">
+        <h2>Gapcoin's highest found merits (Top 30)</h2>
+	<?php echo file_get_contents("http://gapcoin.de/primegaps.php"); ?>
       </div>
-      <?php include("./info.php"); ?>
     </div>
   </body>
 </html>

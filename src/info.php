@@ -28,6 +28,10 @@
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bchain.info/GAP/">Bchain</a></p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://coinia.net/gapcoin/blockexplorer.php">Coinia</a></p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.multifaucet.tk/index.php?blockexplorer=GAP">MultiFaucet</a></p>
+        <h4>Community</h4>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://bitcointalk.org/index.php?topic=822498.0">Bitcointalk</a></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.reddit.com/r/gapcoin">Reddit</a></p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://twitter.com/Gapcoin">Twitter</a></p>
         <p>&nbsp;</p>
         <h5 style="line-height:0.5em;">Donations</h5>
         <p style="color:#b0b0b0; font-size: 0.7em; line-height: 0.5em;">

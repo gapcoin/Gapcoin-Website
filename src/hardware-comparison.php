@@ -49,7 +49,7 @@
               echo "<p>Database server not responding, please try again later</p>";
             } else {
               
-              $query = "SELECT * FROM hardware_comparison WHERE valid=TRUE";
+              $query = "SELECT * FROM hardware_comparison WHERE valid=TRUE ORDER BY pps DESC";
               $response = mysql_query($query);
             
               if ($response != FALSE) {

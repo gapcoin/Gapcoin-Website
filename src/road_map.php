@@ -42,7 +42,11 @@
           <li>Publish encrypted wallet binaries</li>
           <li>Go Open Source (except the mining algorithm), so that people can setup their compile environment</li>
           <li>Start the coin: reveal password for the encrypted wallets and update source code</li>
-          <li class="light_text">Continue working on the next wallet release (bug fixes, etc.)</li>
+          <li class="light_text">Next wallet release</li>
+          <li class="light_text">Update website design</li>
+          <li class="light_text">Translate website</li>
+          <li class="light_text">Improve mining by using the Chinese Remainder Theorem</li>
+          <li class="light_text">Publish a Gapcoin analyse tool</li>
           <li class="light_text">Create an Open Source pool software</li>
         </ul>
       </div>

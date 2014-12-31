@@ -29,8 +29,40 @@
 
     <div id="body_div">
       <div id="artikel_full">
-        <h2>Gapcoin's highes found merits (Top 30)</h2>
-	<?php echo file_get_contents("http://gapcoin.de/primegaps.php"); ?>
+        <h2>Gapcoin's prime gaps</h2>
+        <h3>First known occurrence prime gaps</h3>
+        <p>Gapcoin found 544 first known occurrence prime gaps,
+           <br>
+           and therefore broke the previous records for the smallest prime 
+           starting a gap with a specific length:</p>
+        <p>The prime gaps are published at Dr. Nicely's site (<a href="http://www.trnicely.net/">http://www.trnicely.net/</a>).
+           <br>
+           Gapcoin got listed within the two following lists:</p>
+        <a href="http://www.trnicely.net/gaps/g4k.html">Prime gaps from 4000 to 5998</a>
+        <br>
+        <a href="http://www.trnicely.net/gaps/g6k.html">Prime gaps from 6000 to 7998</a>
+        <p>On the following site, new first known occurrence prime gaps found 
+           by Gapcoin are listed.
+           <br>
+           The site only serves the purpose to give an overview about 
+           Gapcoins current new records.
+           <br>
+           The gaps listed there will frequently be submitted to Dr. Nicely.</p>
+        <a href="./primegaps-length.php">Gapcoin's newly found prime gaps</a>
+        <br>
+        <h3>Highest merits</h3>
+        <p>The merit of a prime gap is the ratio of it's size to the 
+           average prime gap size. 
+           <br>
+           With higher primes the average gap size increases. 
+           <br>
+           The merit is a measurement for how hard it is to find a gap.</p>
+        <p>The following links are the highest merits found by the Gapcoin network,
+           <br>
+           and the prime gap merit world record list.</p>
+        <a href="http://primerecords.dk/primegaps/gaps20.htm">Top-20 world record list</a>
+        <br>
+        <a href="./primegaps-merits.php">Gapcoin's top-30</a>
       </div>
     </div>
   </body>
